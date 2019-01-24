@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvvm="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_frame"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mvvm:MvxBind="Click FirstNavigateCommand; Text FirstButtonText"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mvvm:MvxBind="Click SecondNavigateCommand; Text SecondButtonText"/>
+    <TextView
+        android:id="@+id/valuesPassedSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Values passed:"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        mvvm:MvxBind="Text ValuesPassed"/>
+    <TextView
+        android:id="@+id/valueReturnedSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Value returned from fragment:"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        mvvm:MvxBind="Text ValueReturned"/>
+</LinearLayout>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="245">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="244">
+            <objects>
+                <viewController id="245" sceneMemberID="viewController" customClass="MainViewController" storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="242"/>
+                        <viewControllerLayoutGuide type="bottom" id="243"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="246">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="469" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="90" width="343" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="473" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="145" width="343" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main View Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="730" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="40" width="343" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="735" firstAttribute="height" constant="25"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Values passed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="736" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="225" width="343" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="743" firstAttribute="height" constant="25"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="737" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="265" width="343" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="747" firstAttribute="height" constant="25"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value returned from fragment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="738" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="315" width="343" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="751" firstAttribute="height" constant="25"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="739" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="355" width="343" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="755" firstAttribute="height" constant="25"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="470" firstItem="469" firstAttribute="leading" secondItem="246" secondAttribute="leadingMargin"/>
+                            <constraint id="472" firstAttribute="trailingMargin" secondItem="469" secondAttribute="trailing"/>
+                            <constraint id="474" firstItem="473" firstAttribute="leading" secondItem="246" secondAttribute="leadingMargin"/>
+                            <constraint id="475" firstItem="473" firstAttribute="top" secondItem="469" secondAttribute="bottom" constant="25"/>
+                            <constraint id="476" firstAttribute="trailingMargin" secondItem="473" secondAttribute="trailing"/>
+                            <constraint id="731" firstItem="730" firstAttribute="top" secondItem="242" secondAttribute="bottom" constant="20"/>
+                            <constraint id="732" firstItem="730" firstAttribute="leading" secondItem="246" secondAttribute="leadingMargin"/>
+                            <constraint id="733" firstAttribute="trailingMargin" secondItem="730" secondAttribute="trailing"/>
+                            <constraint id="734" firstItem="469" firstAttribute="top" secondItem="730" secondAttribute="bottom" constant="25"/>
+                            <constraint id="740" firstItem="736" firstAttribute="leading" secondItem="246" secondAttribute="leadingMargin"/>
+                            <constraint id="741" firstAttribute="trailingMargin" secondItem="736" secondAttribute="trailing"/>
+                            <constraint id="742" firstItem="736" firstAttribute="top" secondItem="473" secondAttribute="bottom" constant="50"/>
+                            <constraint id="744" firstItem="737" firstAttribute="top" secondItem="736" secondAttribute="bottom" constant="15"/>
+                            <constraint id="745" firstItem="737" firstAttribute="leading" secondItem="246" secondAttribute="leadingMargin"/>
+                            <constraint id="746" firstAttribute="trailingMargin" secondItem="737" secondAttribute="trailing"/>
+                            <constraint id="748" firstItem="738" firstAttribute="top" secondItem="737" secondAttribute="bottom" constant="25"/>
+                            <constraint id="749" firstItem="738" firstAttribute="leading" secondItem="246" secondAttribute="leadingMargin"/>
+                            <constraint id="750" firstAttribute="trailingMargin" secondItem="738" secondAttribute="trailing"/>
+                            <constraint id="752" firstItem="739" firstAttribute="top" secondItem="738" secondAttribute="bottom" constant="15"/>
+                            <constraint id="753" firstItem="739" firstAttribute="leading" secondItem="246" secondAttribute="leadingMargin"/>
+                            <constraint id="754" firstAttribute="trailingMargin" secondItem="739" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstNavigateButton" destination="469" id="name-outlet-469"/>
+                        <outlet property="secondNavigateButton" destination="473" id="name-outlet-473"/>
+                        <outlet property="valuesPassedLabel" destination="737" id="name-outlet-737"/>
+                        <outlet property="valueReturnedLabel" destination="739" id="name-outlet-739"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="247" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291" y="-548"/>
+        </scene>
+    </scenes>
+</document>
