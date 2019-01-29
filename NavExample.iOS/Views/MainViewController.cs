@@ -33,9 +33,9 @@ namespace NavExample.iOS.Views
 
             // Perform any additional setup after loading the view, typically from a nib.
             var set = this.CreateBindingSet<MainViewController, MainViewModel>();
-            set.Bind(firstNavigateButton).To(vm => vm.FirstNavigateCommand);
+            set.Bind(firstNavigateButton).To(vm => vm.FirstNavigateCommandHandler);
             set.Bind(firstNavigateButton).For(v => v.BindTitle()).To(vm => vm.FirstButtonText);
-            set.Bind(secondNavigateButton).To(vm => vm.SecondNavigateCommand);
+            set.Bind(secondNavigateButton).To(vm => vm.SecondNavigateCommandHandler);
             set.Bind(secondNavigateButton).For(v => v.BindTitle()).To(vm => vm.SecondButtonText);
             set.Bind(valuesPassedLabel).To(vm => vm.ValuesPassed);
             set.Bind(valueReturnedLabel).To(vm => vm.ValueReturned);

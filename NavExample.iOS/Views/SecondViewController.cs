@@ -37,7 +37,7 @@ namespace NavExample.iOS.Views
             // Perform any additional setup after loading the view, typically from a nib.
             var set = this.CreateBindingSet<SecondViewController, SecondViewModel>();
             
-            set.Bind(closeButton).To(vm => vm.CloseCommand);
+            set.Bind(closeButton).To(vm => vm.CloseCommandHandler);
             set.Bind(closeButton).For(v => v.BindTitle()).To(vm => vm.CloseButtonText);
 
             set.Apply();
@@ -45,8 +45,7 @@ namespace NavExample.iOS.Views
 
         public override void ViewWillAppear(bool animated)
         {
-            base.ViewWillAppear(animated);
-            
+            base.ViewWillAppear(animated);  
         }
 
         public override void ViewDidAppear(bool animated)

@@ -15,18 +15,18 @@ namespace NavExample.Core.ViewModels
         {
             _navigationService = navigationService;
 
-            CloseCommand = new MvxAsyncCommand(CloseViewModel);
+            CloseCommandHandler = new MvxAsyncCommand(CloseViewModel);
 
             _closeButtonText = "Close this ViewModel!";
         }
 
         public string CloseButtonText
         {
-            get { return _closeButtonText; }
-            set { SetProperty(ref _closeButtonText, value); }
+            get => _closeButtonText;
+            set => SetProperty(ref _closeButtonText, value);
         }
 
-        public IMvxAsyncCommand CloseCommand { get; }
+        public IMvxAsyncCommand CloseCommandHandler { get; }
         private async Task CloseViewModel()
         {
             await _navigationService.Close(this);

@@ -1,5 +1,4 @@
-﻿using MvvmCross.IoC;
-using MvvmCross.ViewModels;
+﻿using MvvmCross.ViewModels;
 using NavExample.Core.ViewModels;
 
 namespace NavExample.Core
@@ -8,11 +7,6 @@ namespace NavExample.Core
     {
         public override void Initialize()
         {
-            CreatableTypes()
-                .EndingWith("Service")
-                .AsInterfaces()
-                .RegisterAsLazySingleton();
-
             RegisterAppStart<MainViewModel>();
         }
     }

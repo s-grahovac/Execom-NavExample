@@ -9,11 +9,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        mvvm:MvxBind="Click FirstNavigateCommand; Text FirstButtonText"/>
+        mvvm:MvxBind="Click FirstNavigateCommandHandler; Text FirstButtonText"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        mvvm:MvxBind="Click SecondNavigateCommand; Text SecondButtonText"/>
+        mvvm:MvxBind="Click SecondNavigateCommandHandler; Text SecondButtonText"/>
     <TextView
         android:id="@+id/valuesPassedSubtitle"
         android:layout_width="match_parent"
