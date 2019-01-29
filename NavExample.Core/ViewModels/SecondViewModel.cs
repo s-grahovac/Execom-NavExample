@@ -47,7 +47,7 @@ namespace NavExample.Core.ViewModels
         private void DoSomethingPrivately()
         {
             // Sample logic of some parameter/result interaction.
-            var value = 10 * (_navigationParameter._firstValue + _navigationParameter._secondValue);
+            var value = 10 * (_navigationParameter.FirstValue + _navigationParameter.SecondValue);
             var label = "Calculated value is: ";
 
             _returningResult = new MyResult(label, value);
@@ -61,26 +61,27 @@ namespace NavExample.Core.ViewModels
         // A nested class exemplifying the custom object used as a parameter passed during the navigation.
         public class MyParameter
         {
-            internal readonly int _firstValue;
-            internal readonly int _secondValue;
-
-            public MyParameter(int FirstValue, int SecondValue)
+            public MyParameter(int FirstParameterValue, int SecondParameterValue)
             {
-                _firstValue = FirstValue;
-                _secondValue = SecondValue;
+                FirstValue = FirstParameterValue;
+                SecondValue = SecondParameterValue;
             }
+
+            public int FirstValue { get; }
+
+            public int SecondValue { get; }
 
             public override string ToString()
             {
-                return $"{_firstValue}, {_secondValue}";
+                return $"{FirstValue}, {SecondValue}";
             }
         }
 
         // A nested class exemplifying the custom object used as a return type during the navigation.
         public class MyResult
         {
-            internal readonly string _internalTextField;
-            internal readonly int _internalValue;
+            private readonly string _internalTextField;
+            private readonly int _internalValue;
 
             public MyResult(string InputString, int InputValue)
             {
