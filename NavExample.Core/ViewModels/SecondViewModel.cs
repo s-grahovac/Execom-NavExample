@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -45,8 +46,11 @@ namespace NavExample.Core.ViewModels
 
         private void DoSomethingPrivately()
         {
-            _returningResult = new MyResult("Calculated value: ", 15, _navigationParameter);
-            _returningResult.DoSomeTransmutation();
+            // Sample logic of some parameter/result interaction.
+            var value = 10 * (_navigationParameter._firstValue + _navigationParameter._secondValue);
+            var label = "Calculated value is: ";
+
+            _returningResult = new MyResult(label, value);
         }
 
         private async Task CloseViewModel()
@@ -57,14 +61,8 @@ namespace NavExample.Core.ViewModels
         // A nested class exemplifying the custom object used as a parameter passed during the navigation.
         public class MyParameter
         {
-            private readonly int _firstValue;
-            private readonly int _secondValue;
-
-            public MyParameter()
-            {
-                _firstValue = 1;
-                _secondValue = 1;
-            }
+            internal readonly int _firstValue;
+            internal readonly int _secondValue;
 
             public MyParameter(int FirstValue, int SecondValue)
             {
@@ -72,49 +70,27 @@ namespace NavExample.Core.ViewModels
                 _secondValue = SecondValue;
             }
 
-            public int DoCalculation()
-            {
-                return 10 * (_firstValue + _secondValue);
-            }
-
             public override string ToString()
             {
-                return _firstValue.ToString() + ", " + _secondValue.ToString();
+                return $"{_firstValue.ToString()}, {_secondValue.ToString()}";
             }
         }
 
         // A nested class exemplifying the custom object used as a return type during the navigation.
         public class MyResult
         {
-            private string _internalTextField;
-            private int _internalValue;
-            private readonly MyParameter _internalParameter;
+            internal readonly string _internalTextField;
+            internal readonly int _internalValue;
 
-            public MyResult()
-            {
-                _internalTextField = "This is a test string.";
-                _internalValue = 1;
-                _internalParameter = new MyParameter(1, 1);
-            }
-
-            public MyResult(string InputString, int InputValue, MyParameter InputParemeter)
+            public MyResult(string InputString, int InputValue)
             {
                 _internalTextField = InputString;
                 _internalValue = InputValue;
-                _internalParameter = InputParemeter;
-            }
-
-            public MyResult DoSomeTransmutation()
-            {
-                _internalValue = _internalValue + _internalParameter.DoCalculation();
-                _internalTextField = _internalTextField + _internalValue.ToString();
-
-                return this;
             }
 
             public override string ToString()
             {
-                return _internalTextField;
+                return $"{_internalTextField} {_internalValue, 10}";
             }
         }
     }
