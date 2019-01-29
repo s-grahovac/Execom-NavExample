@@ -72,7 +72,7 @@ namespace NavExample.Core.ViewModels
 
             public override string ToString()
             {
-                return $"{_firstValue.ToString()}, {_secondValue.ToString()}";
+                return $"{_firstValue}, {_secondValue}";
             }
         }
 
